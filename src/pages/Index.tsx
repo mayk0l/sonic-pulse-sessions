@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Navbar } from '@/components/Navbar';
 import { RadioPlayer } from '@/components/RadioPlayer';
@@ -55,7 +54,7 @@ const Index = () => {
       id: 6,
       name: 'Tempo Drift',
       genre: 'Deep Tech / Progressive',
-      image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3',
+      image: 'https://images.unsplash.com/photo-1470225628253-6c7f817e4bad?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3',
     },
     {
       id: 7,
@@ -218,58 +217,48 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center">
+      {/* Hero Section with Radio Player */}
+      <section className="relative min-h-screen flex flex-col items-center justify-center py-20">
         <div className="absolute inset-0">
           <img 
             src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" 
             alt="Techno Event" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-techno-darker via-techno-darker/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-techno-darker via-techno-darker/90 to-transparent"></div>
         </div>
         
-        <div className="container relative z-10 text-center px-4">
+        <div className="container relative z-10 text-center px-4 mb-16">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display mb-6 tracking-wider animate-fade-in">
             SONIC<span className="text-neon-purple">PULSE</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "200ms" }}>
             Immerse yourself in the underground techno scene with live sets, talented DJs, and exclusive events
           </p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "400ms" }}>
-            <Button className="bg-neon-purple hover:bg-neon-purple/80 text-black text-lg px-8 py-6">
-              Listen Live
-            </Button>
-            <Button variant="outline" className="border-neon-cyan text-neon-cyan hover:bg-neon-cyan/20 text-lg px-8 py-6">
-              Explore Events
-            </Button>
-          </div>
         </div>
-      </section>
-      
-      {/* Radio Section */}
-      <section id="radio" className="py-20">
-        <div className="container px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-12">
-            <div>
-              <h2 className="text-3xl font-display mb-2">LIVE RADIO</h2>
-              <p className="text-gray-400">Tune in to our 24/7 streaming techno radio</p>
-            </div>
-            <Button variant="link" className="text-neon-purple">
-              View Schedule
-            </Button>
-          </div>
-          
-          <RadioPlayer />
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            {['Deep Techno', 'Minimal', 'Industrial'].map((channel) => (
-              <div key={channel} className="techno-card p-6 hover:border-neon-purple/50 transition-all duration-300">
-                <h3 className="font-medium mb-2">{channel} Channel</h3>
-                <p className="text-sm text-gray-400 mb-4">Specialized streams for focused listening</p>
-                <Button variant="outline" className="w-full">Listen</Button>
+        
+        {/* Featured Radio Player */}
+        <div className="container relative z-10 px-4 animate-fade-in" style={{ animationDelay: "400ms" }}>
+          <div className="max-w-5xl mx-auto">
+            <div className="glass border border-neon-purple/30 p-2 rounded-lg mb-8">
+              <div className="flex justify-between items-center mb-4 px-4 pt-2">
+                <div className="flex items-center">
+                  <span className="inline-block w-3 h-3 bg-neon-purple rounded-full animate-pulse mr-2"></span>
+                  <h2 className="text-xl font-display">LIVE RADIO</h2>
+                </div>
+                <p className="text-neon-cyan text-sm">Broadcasting 24/7</p>
               </div>
-            ))}
+              <RadioPlayer />
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button className="bg-neon-purple hover:bg-neon-purple/80 text-black text-lg px-8 py-6">
+                Listen Live
+              </Button>
+              <Button variant="outline" className="border-neon-cyan text-neon-cyan hover:bg-neon-cyan/20 text-lg px-8 py-6">
+                Explore Events
+              </Button>
+            </div>
           </div>
         </div>
       </section>

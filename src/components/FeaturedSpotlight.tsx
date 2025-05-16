@@ -43,7 +43,7 @@ export function FeaturedSpotlight({
         </div>
         
         <CardContent className={cn(
-          "p-6 md:w-3/5 flex flex-col justify-between relative overflow-hidden",
+          "p-4 sm:p-6 md:w-3/5 flex flex-col justify-between relative overflow-hidden",
           "before:absolute before:inset-0 before:bg-gradient-to-r before:from-neon-purple/5 before:to-transparent before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-500"
         )}>
           <div>
@@ -51,15 +51,15 @@ export function FeaturedSpotlight({
               {type === 'dj' ? 'Artist Spotlight' : 'Featured Event'}
             </Badge>
             <div className="mb-2">
-              <h3 className="text-2xl font-display mb-1 group-hover:text-neon-purple transition-colors duration-300">{title}</h3>
-              <p className="text-neon-cyan text-sm">{subtitle}</p>
+              <h3 className="text-xl sm:text-2xl font-display mb-1 group-hover:text-neon-purple transition-colors duration-300">{title}</h3>
+              <p className="text-neon-cyan text-xs sm:text-sm">{subtitle}</p>
             </div>
             
-            <p className="text-gray-300 mb-4 line-clamp-3">{description}</p>
+            <p className="text-gray-300 text-sm sm:text-base mb-4 line-clamp-3">{description}</p>
           </div>
           
-          <div className="mt-4">
-            <Button asChild className="bg-neon-purple hover:bg-neon-purple/80 text-black group">
+          <div className="mt-3 sm:mt-4">
+            <Button asChild className="bg-neon-purple hover:bg-neon-purple/80 text-black group w-full sm:w-auto">
               <a href={ctaLink}>
                 {ctaText}
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

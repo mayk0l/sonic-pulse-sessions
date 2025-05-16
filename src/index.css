@@ -40,6 +40,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    -webkit-tap-highlight-color: transparent;
   }
 
   /* Custom classes */
@@ -53,6 +54,25 @@
 
   .glass {
     @apply backdrop-blur-md bg-black/40 border border-white/10;
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 640px) {
+    .container {
+      @apply px-3;
+    }
+    
+    h1 {
+      @apply text-3xl;
+    }
+    
+    h2 {
+      @apply text-2xl;
+    }
+    
+    .glass {
+      @apply backdrop-blur-sm;
+    }
   }
 
   /* Scrollbar Styling */
@@ -150,4 +170,27 @@
 
 .animation-delay-500 {
   animation-delay: 500ms;
+}
+
+/* Mobile touch interactions */
+@media (hover: none) {
+  .group:active .group-hover\:scale-105 {
+    transform: scale(1.03);
+  }
+  
+  .group:active .group-hover\:opacity-100 {
+    opacity: 1;
+  }
+  
+  .group:active .group-hover\:translate-x-1 {
+    transform: translateX(4px);
+  }
+  
+  .hover\:bg-neon-purple\/30:active {
+    background-color: rgba(155, 135, 245, 0.3);
+  }
+  
+  .hover\:bg-neon-purple\/80:active {
+    background-color: rgba(155, 135, 245, 0.8);
+  }
 }

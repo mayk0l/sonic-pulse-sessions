@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,20 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				neon: {
+					purple: '#9b87f5',
+					cyan: '#0EA5E9',
+					magenta: '#ec4899',
+				},
+				techno: {
+					dark: '#121212',
+					darker: '#0a0a0a',
+					light: '#2a2a2a',
+				},
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				display: ['Orbitron', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +89,40 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-slow': {
+					'0%, 100%': {
+						opacity: 1
+					},
+					'50%': {
+						opacity: 0.5
+					}
+				},
+				'waveform': {
+					'0%': {
+						height: '5px'
+					},
+					'50%': {
+						height: '20px'
+					},
+					'100%': {
+						height: '5px'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
+				'waveform-1': 'waveform 1.2s ease-in-out infinite',
+				'waveform-2': 'waveform 0.9s ease-in-out infinite',
+				'waveform-3': 'waveform 1.5s ease-in-out infinite',
+				'waveform-4': 'waveform 0.8s ease-in-out infinite',
+				'waveform-5': 'waveform 1.1s ease-in-out infinite',
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'techno-pattern': 'linear-gradient(to right, #121212 1px, transparent 1px), linear-gradient(to bottom, #121212 1px, transparent 1px)',
 			}
 		}
 	},

@@ -2,10 +2,11 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Instagram, Radio, Mail } from 'lucide-react';
+import { BookingForm } from '@/components/dj-profile/BookingForm';
 
 export function ProfileContactTab() {
   return (
-    <div className="animate-fade-in">
+    <div className="animate-fade-in space-y-8">
       <Card className="glass border-neon-purple/20">
         <CardContent className="p-6 md:p-8 text-center">
           <h2 className="text-2xl font-display mb-6">CONTRATACIONES</h2>
@@ -57,6 +58,9 @@ export function ProfileContactTab() {
           </div>
         </CardContent>
       </Card>
+      
+      {/* Booking Form */}
+      <BookingForm />
     </div>
   );
 }

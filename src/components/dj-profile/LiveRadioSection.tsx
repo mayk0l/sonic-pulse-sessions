@@ -10,10 +10,13 @@ export function LiveRadioSection() {
           <div className="glass border border-neon-purple/30 p-2 rounded-lg mb-8">
             <div className="flex justify-between items-center mb-4 px-4 pt-2">
               <div className="flex items-center">
-                <span className="inline-block w-3 h-3 bg-neon-purple rounded-full animate-pulse mr-2"></span>
+                <span className="inline-block w-3 h-3 bg-[#ea384c] rounded-full animate-pulse mr-2"></span>
                 <h3 className="text-xl font-display">IMPCORE RADIO</h3>
               </div>
-              <p className="text-neon-cyan text-sm">Broadcasting 24/7</p>
+              <div className="flex items-center">
+                <span className="inline-block w-2 h-2 bg-[#ea384c] rounded-full animate-pulse mr-1"></span>
+                <p className="text-[#ea384c] text-sm font-medium">EN VIVO</p>
+              </div>
             </div>
             <RadioPlayer />
           </div>

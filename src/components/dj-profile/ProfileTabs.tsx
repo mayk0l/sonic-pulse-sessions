@@ -5,12 +5,13 @@ import { DjProfile } from '@/types/dj';
 import { ProfileBioTab } from './tabs/ProfileBioTab';
 import { ProfileMediaTab } from './tabs/ProfileMediaTab';
 import { ProfileContactTab } from './tabs/ProfileContactTab';
+import { ProfileReviewsTab } from './tabs/ProfileReviewsTab';
 
 type ProfileTabsProps = {
   djProfile: DjProfile;
 };
 
-type TabType = 'bio' | 'media' | 'contact';
+type TabType = 'bio' | 'media' | 'reviews' | 'contact';
 
 export function ProfileTabs({ djProfile }: ProfileTabsProps) {
   const [activeTab, setActiveTab] = useState<TabType>('bio');
@@ -36,6 +37,13 @@ export function ProfileTabs({ djProfile }: ProfileTabsProps) {
               Media
             </Button>
             <Button 
+              variant={activeTab === 'reviews' ? 'default' : 'ghost'} 
+              className={activeTab === 'reviews' ? 'bg-neon-purple text-black' : 'text-gray-300'} 
+              onClick={() => setActiveTab('reviews')}
+            >
+              Reseñas
+            </Button>
+            <Button 
               variant={activeTab === 'contact' ? 'default' : 'ghost'} 
               className={activeTab === 'contact' ? 'bg-neon-purple text-black' : 'text-gray-300'} 
               onClick={() => setActiveTab('contact')}
@@ -52,6 +60,7 @@ export function ProfileTabs({ djProfile }: ProfileTabsProps) {
           <div className="max-w-4xl mx-auto">
             {activeTab === 'bio' && <ProfileBioTab djProfile={djProfile} />}
             {activeTab === 'media' && <ProfileMediaTab djProfile={djProfile} />}
+            {activeTab === 'reviews' && <ProfileReviewsTab />}
             {activeTab === 'contact' && <ProfileContactTab />}
           </div>
         </div>

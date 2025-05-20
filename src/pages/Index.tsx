@@ -221,16 +221,18 @@ const Index = () => {
       <section className="relative min-h-screen flex flex-col items-center justify-center py-20">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" 
+            src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" 
             alt="Techno Event" 
             className="w-full h-full object-cover"
+            style={{ filter: 'hue-rotate(320deg) saturate(1.5)' }} // Adds a red tint to the image
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-impcore-dark via-impcore-dark/90 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-impcore-dark via-impcore-dark/90 to-transparent" 
+              style={{ background: 'linear-gradient(to top, rgb(10, 10, 15), rgba(10, 10, 15, 0.9), transparent)' }}></div>
         </div>
         
         <div className="container relative z-10 text-center px-4 mb-16">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-wider animate-fade-in">
-            IMP<span className="text-impcore-pink">CORE</span>
+            IMP<span className="text-[#ea384c]">CORE</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "200ms" }}>
             Sumérgete en la escena techno underground con sets en vivo, DJs talentosos y eventos exclusivos
@@ -240,19 +242,19 @@ const Index = () => {
         {/* Featured Radio Player */}
         <div className="container relative z-10 px-4 animate-fade-in" style={{ animationDelay: "400ms" }}>
           <div className="max-w-5xl mx-auto">
-            <div className="glass border border-impcore-pink/30 p-2 rounded-lg mb-8">
+            <div className="glass border border-[#ea384c]/30 p-2 rounded-lg mb-8">
               <div className="flex justify-between items-center mb-4 px-4 pt-2">
                 <div className="flex items-center">
-                  <span className="inline-block w-3 h-3 bg-impcore-pink rounded-full animate-pulse mr-2"></span>
+                  <span className="inline-block w-3 h-3 bg-[#ea384c] rounded-full animate-pulse mr-2"></span>
                   <h2 className="text-xl font-bold">RADIO EN VIVO</h2>
                 </div>
-                <p className="text-impcore-pink text-sm">Transmitiendo 24/7</p>
+                <p className="text-[#ea384c] text-sm">Transmitiendo 24/7</p>
               </div>
               <RadioPlayer />
             </div>
             
             <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-impcore-pink hover:bg-impcore-darkpink text-white text-lg px-8 py-6">
+              <Button className="bg-[#ea384c] hover:bg-[#ea384c]/80 text-white text-lg px-8 py-6">
                 Escuchar En Vivo
               </Button>
               <Button variant="outline" className="border-white text-white hover:bg-white/20 text-lg px-8 py-6">

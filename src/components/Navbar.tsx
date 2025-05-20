@@ -3,13 +3,14 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, Instagram, SoundCloud } from "lucide-react";
 
 const navItems = [
   { name: 'Radio', href: '#radio' },
   { name: 'DJs', href: '#djs' },
   { name: 'Videos', href: '#videos' },
-  { name: 'Events', href: '#events' },
+  { name: 'Eventos', href: '#events' },
+  { name: 'Contacto', href: '#contacto' },
 ];
 
 export function Navbar() {
@@ -34,7 +35,7 @@ export function Navbar() {
       <div className="container flex items-center justify-between">
         <div className="flex items-center">
           <a href="/" className="text-2xl font-display text-white tracking-widest">
-            SONIC<span className="text-neon-purple">PULSE</span>
+            IMP<span className="text-neon-purple">CORE</span>
           </a>
         </div>
 
@@ -50,6 +51,26 @@ export function Navbar() {
             </a>
           ))}
         </nav>
+
+        {/* Social Icons - Desktop */}
+        <div className="hidden md:flex items-center gap-4">
+          <a 
+            href="https://www.instagram.com/impcore.cl" 
+            target="_blank" 
+            rel="noreferrer"
+            className="text-gray-300 hover:text-neon-purple transition-colors duration-200"
+          >
+            <Instagram className="h-5 w-5" />
+          </a>
+          <a 
+            href="https://soundcloud.com/imp-records-820395379" 
+            target="_blank" 
+            rel="noreferrer"
+            className="text-gray-300 hover:text-neon-purple transition-colors duration-200"
+          >
+            <SoundCloud className="h-5 w-5" />
+          </a>
+        </div>
 
         {/* Mobile Navigation */}
         <Sheet>
@@ -69,6 +90,27 @@ export function Navbar() {
                   {item.name}
                 </a>
               ))}
+              <div className="pt-4 border-t border-gray-800">
+                <p className="text-sm text-gray-400 mb-4">Síguenos en:</p>
+                <div className="flex gap-4">
+                  <a 
+                    href="https://www.instagram.com/impcore.cl" 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="text-gray-300 hover:text-neon-purple transition-colors duration-200"
+                  >
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                  <a 
+                    href="https://soundcloud.com/imp-records-820395379" 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="text-gray-300 hover:text-neon-purple transition-colors duration-200"
+                  >
+                    <SoundCloud className="h-5 w-5" />
+                  </a>
+                </div>
+              </div>
             </div>
           </SheetContent>
         </Sheet>

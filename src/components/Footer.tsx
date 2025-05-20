@@ -1,5 +1,6 @@
 
 import { Button } from '@/components/ui/button';
+import { Instagram, SoundCloud, Music } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -8,7 +9,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
           <div>
             <h2 className="text-2xl font-display text-white mb-2">
-              SONIC<span className="text-neon-purple">PULSE</span>
+              IMP<span className="text-neon-purple">CORE</span>
             </h2>
             <p className="text-gray-400 max-w-md">
               The ultimate destination for techno music enthusiasts. Streaming live sets, showcasing talented DJs, and bringing you the best events.
@@ -47,13 +48,21 @@ export function Footer() {
           <div>
             <h3 className="font-medium mb-4 text-white">Connect</h3>
             <ul className="space-y-2">
-              {['Instagram', 'SoundCloud', 'YouTube', 'Twitter', 'Facebook'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-gray-400 hover:text-neon-purple text-sm">
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a href="https://www.instagram.com/impcore.cl" className="text-gray-400 hover:text-neon-purple text-sm flex items-center gap-2">
+                  <Instagram className="h-4 w-4" /> Instagram
+                </a>
+              </li>
+              <li>
+                <a href="https://soundcloud.com/imp-records-820395379" className="text-gray-400 hover:text-neon-purple text-sm flex items-center gap-2">
+                  <SoundCloud className="h-4 w-4" /> SoundCloud
+                </a>
+              </li>
+              <li>
+                <a href="https://impcore.bandcamp.com" className="text-gray-400 hover:text-neon-purple text-sm flex items-center gap-2">
+                  <Music className="h-4 w-4" /> Bandcamp
+                </a>
+              </li>
             </ul>
           </div>
           
@@ -86,7 +95,7 @@ export function Footer() {
         
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} SonicPulse. All rights reserved.
+            © {new Date().getFullYear()} IMPCORE. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0">
             <div className="flex space-x-4">

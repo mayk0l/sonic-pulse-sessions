@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
-import { Play, Pause, Volume2, VolumeX, Calendar, SkipForward, SkipBack, Mic } from 'lucide-react';
+import { Play, Pause, Volume2, VolumeX, Calendar, SkipForward, SkipBack, Radio } from 'lucide-react';
 import { Slider } from '@/components/ui/slider';
 import { Toggle } from '@/components/ui/toggle';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
@@ -83,7 +83,7 @@ export function RadioPlayer() {
                   <Badge className="absolute top-3 left-1/2 transform -translate-x-1/2 bg-impcore-pink text-white px-3 py-1">
                     EN VIVO
                   </Badge>
-                  <Mic className={cn(
+                  <Radio className={cn(
                     "w-10 h-10 text-impcore-pink opacity-80",
                     isPlaying && "animate-pulse"
                   )} />
@@ -115,7 +115,7 @@ export function RadioPlayer() {
                   </p>
                 </div>
               ) : (
-                <p className="text-gray-400 text-sm mt-2 text-center md:text-left">
+                <p className="text-gray-400 text-sm mt-2 text-center md:text-left max-w-full">
                   Sets en vivo 24/7 — Presiona play para comenzar a escuchar
                 </p>
               )}
@@ -248,3 +248,4 @@ export function RadioPlayer() {
     </div>
   );
 }
+

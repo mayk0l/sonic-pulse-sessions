@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -13,19 +13,19 @@
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 262 83% 75%;
+    --primary: 339 83% 51%; /* IMPCORE pink */
     --primary-foreground: 240 5.9% 10%;
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
-    --accent: 262 83% 75%;
+    --accent: 339 83% 51%; /* IMPCORE pink */
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 262 83% 75%;
+    --ring: 339 83% 51%; /* IMPCORE pink */
     --radius: 0.5rem;
   }
 
@@ -34,22 +34,23 @@
   }
 
   body {
-    @apply bg-techno-darker text-foreground antialiased;
-    background-image: radial-gradient(circle at center, rgba(155, 135, 245, 0.05) 0%, transparent 80%);
+    @apply bg-impcore-dark text-foreground antialiased;
+    background-image: radial-gradient(circle at center, rgba(233, 30, 99, 0.05) 0%, transparent 80%);
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     -webkit-tap-highlight-color: transparent;
+    font-family: 'Roboto', sans-serif;
   }
 
   /* Custom classes */
   .techno-card {
-    @apply bg-techno-dark border border-gray-800 rounded-lg overflow-hidden hover:border-neon-purple/50 transition-all duration-300;
+    @apply bg-impcore-dark border border-gray-800 rounded-lg overflow-hidden hover:border-impcore-pink/50 transition-all duration-300;
   }
 
   .techno-gradient {
-    @apply bg-gradient-to-br from-neon-purple/80 to-neon-cyan/80;
+    @apply bg-gradient-to-br from-impcore-pink/80 to-neon-cyan/80;
   }
 
   .glass {

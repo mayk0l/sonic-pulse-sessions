@@ -26,16 +26,16 @@ export function DjCard({ id, name, genre, image }: DjCardProps) {
         />
         <div className="absolute bottom-0 left-0 right-0 p-4">
           <div className="backdrop-blur-sm bg-black/60 p-3 rounded-lg">
-            <Badge className="bg-neon-purple/20 text-neon-purple border-none mb-1 hover:bg-neon-purple/30">
+            <Badge className="bg-impcore-pink/20 text-impcore-pink border-none mb-1 hover:bg-impcore-pink/30">
               {genre}
             </Badge>
             <h3 className="text-xl font-bold text-white mb-2">{name}</h3>
             <Link to={`/dj/${slug}`}>
               <Button 
                 variant="outline" 
-                className="border-neon-purple hover:bg-neon-purple/20 text-white w-full group"
+                className="border-impcore-pink hover:bg-impcore-pink/20 text-white w-full group"
               >
-                <span className="group-hover:text-neon-purple transition-colors">Ver Perfil</span>
+                <span className="group-hover:text-impcore-pink transition-colors">Ver Perfil</span>
               </Button>
             </Link>
           </div>

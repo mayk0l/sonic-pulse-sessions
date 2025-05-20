@@ -3,17 +3,17 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
-import { Play, Pause, Volume2, VolumeX, Calendar, List, SkipForward, SkipBack, Mic } from 'lucide-react';
+import { Play, Pause, Volume2, VolumeX, Calendar, SkipForward, SkipBack, Mic } from 'lucide-react';
 import { Slider } from '@/components/ui/slider';
 import { Toggle } from '@/components/ui/toggle';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import { Badge } from '@/components/ui/badge';
 
 const radioTracks = [
-  { title: "Night Drive Sessions", artist: "Techna", duration: "12:34" },
+  { title: "Night Drive Sessions", artist: "NASAC", duration: "12:34" },
   { title: "Deep Diver", artist: "Bass Kontrol", duration: "8:45" },
   { title: "Hypnotic State", artist: "Pulse Rider", duration: "9:22" },
-  { title: "Berlin Minimal", artist: "Synthetika", duration: "11:05" },
+  { title: "Santiago Minimal", artist: "Synthetika", duration: "11:05" },
 ];
 
 export function RadioPlayer() {
@@ -66,30 +66,30 @@ export function RadioPlayer() {
 
   return (
     <div className="space-y-4">
-      <Card className="glass border-neon-purple/20 relative overflow-hidden">
+      <Card className="glass border-impcore-pink/20 relative overflow-hidden">
         {/* Background animated gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-neon-purple/10 to-neon-cyan/10 opacity-50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-impcore-pink/10 to-neon-cyan/10 opacity-50"></div>
         <div className={cn(
-          "absolute inset-0 bg-gradient-to-tr from-neon-purple/20 to-neon-cyan/20 opacity-30",
+          "absolute inset-0 bg-gradient-to-tr from-impcore-pink/20 to-neon-cyan/20 opacity-30",
           isPlaying && "animate-pulse-slow"
         )}></div>
         
         <CardContent className="p-6 relative z-10">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex-shrink-0">
-              <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-neon-purple glow">
-                <div className="absolute inset-0 bg-gradient-to-br from-black via-techno-dark to-black"></div>
+              <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-impcore-pink glow">
+                <div className="absolute inset-0 bg-gradient-to-br from-black via-impcore-dark to-black"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Badge className="absolute top-3 left-1/2 transform -translate-x-1/2 bg-neon-purple text-black px-3 py-1">
-                    LIVE
+                  <Badge className="absolute top-3 left-1/2 transform -translate-x-1/2 bg-impcore-pink text-white px-3 py-1">
+                    EN VIVO
                   </Badge>
                   <Mic className={cn(
-                    "w-10 h-10 text-neon-purple opacity-80",
+                    "w-10 h-10 text-impcore-pink opacity-80",
                     isPlaying && "animate-pulse"
                   )} />
                 </div>
                 <div className={cn(
-                  "absolute inset-0 bg-gradient-to-tr from-neon-purple/30 to-neon-cyan/30",
+                  "absolute inset-0 bg-gradient-to-tr from-impcore-pink/30 to-neon-cyan/30",
                   isPlaying && "animate-pulse-slow"
                 )}></div>
               </div>
@@ -97,26 +97,26 @@ export function RadioPlayer() {
             
             <div className="flex-grow">
               <div className="flex items-center gap-2 justify-center md:justify-start">
-                <h3 className="text-2xl font-display">SONIC PULSE RADIO</h3>
+                <h3 className="text-2xl font-bold">IMPCORE RADIO</h3>
                 {isPlaying && (
-                  <div className="inline-flex items-center bg-neon-purple/20 px-2 py-1 rounded text-neon-purple text-xs">
-                    <span className="animate-pulse mr-1">●</span> ON AIR
+                  <div className="inline-flex items-center bg-impcore-pink/20 px-2 py-1 rounded text-impcore-pink text-xs">
+                    <span className="animate-pulse mr-1">●</span> AL AIRE
                   </div>
                 )}
               </div>
               
               {isPlaying ? (
                 <div>
-                  <p className="text-neon-purple text-sm mt-2 text-center md:text-left">
-                    Now Playing: <span className="text-white">{currentTrack.title}</span>
+                  <p className="text-impcore-pink text-sm mt-2 text-center md:text-left">
+                    Reproduciendo: <span className="text-white">{currentTrack.title}</span>
                   </p>
                   <p className="text-gray-400 text-xs mt-0.5 text-center md:text-left">
-                    by {currentTrack.artist}
+                    por {currentTrack.artist}
                   </p>
                 </div>
               ) : (
                 <p className="text-gray-400 text-sm mt-2 text-center md:text-left">
-                  Stream Live Sets 24/7 — Press play to start listening
+                  Sets en vivo 24/7 — Presiona play para comenzar a escuchar
                 </p>
               )}
               
@@ -126,7 +126,7 @@ export function RadioPlayer() {
                     <div 
                       key={i} 
                       className={cn(
-                        "w-1 bg-neon-purple rounded-full",
+                        "w-1 bg-impcore-pink rounded-full",
                         `animate-waveform-${i % 5 + 1}`
                       )}
                       style={{ 
@@ -154,7 +154,7 @@ export function RadioPlayer() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="rounded-full border-neon-purple text-neon-purple hover:bg-neon-purple/20 w-12 h-12"
+                  className="rounded-full border-impcore-pink text-impcore-pink hover:bg-impcore-pink/20 w-12 h-12"
                   onClick={togglePlay}
                 >
                   {isPlaying ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6 ml-0.5" />}
@@ -193,24 +193,24 @@ export function RadioPlayer() {
       </Card>
 
       <div className="flex justify-end gap-2">
-        <ToggleGroup type="single" value={showSchedule ? "schedule" : ""} className="bg-techno-dark border border-gray-800 rounded-lg">
+        <ToggleGroup type="single" value={showSchedule ? "schedule" : ""} className="bg-impcore-dark border border-gray-800 rounded-lg">
           <ToggleGroupItem 
             value="schedule" 
             onClick={() => setShowSchedule(!showSchedule)}
-            className="text-sm data-[state=on]:bg-neon-purple/20 data-[state=on]:text-neon-purple"
+            className="text-sm data-[state=on]:bg-impcore-pink/20 data-[state=on]:text-impcore-pink"
           >
             <Calendar className="h-4 w-4 mr-2" />
-            Schedule
+            Horario
           </ToggleGroupItem>
         </ToggleGroup>
       </div>
 
       {showSchedule && (
-        <Card className="bg-techno-dark border-gray-800 animate-fade-in">
+        <Card className="bg-impcore-dark border-gray-800 animate-fade-in">
           <CardContent className="p-4">
-            <h3 className="font-display text-lg mb-3 flex items-center">
-              <Calendar className="h-4 w-4 mr-2 text-neon-purple" />
-              Today's Schedule
+            <h3 className="font-bold text-lg mb-3 flex items-center">
+              <Calendar className="h-4 w-4 mr-2 text-impcore-pink" />
+              Horario de Hoy
             </h3>
             <div className="space-y-2">
               <div className="flex justify-between py-2 border-b border-gray-800">
@@ -227,10 +227,10 @@ export function RadioPlayer() {
                 </div>
                 <p className="text-sm text-gray-400">12:00 - 16:00</p>
               </div>
-              <div className="flex justify-between py-2 border-b border-gray-800 bg-techno-darker/30">
+              <div className="flex justify-between py-2 border-b border-gray-800 bg-impcore-darker/30">
                 <div>
-                  <p className="font-medium text-neon-purple">Night Drive Sessions</p>
-                  <p className="text-xs text-gray-400">Pulse Rider</p>
+                  <p className="font-medium text-impcore-pink">Night Drive Sessions</p>
+                  <p className="text-xs text-gray-400">NASAC</p>
                 </div>
                 <p className="text-sm text-gray-400">16:00 - 22:00</p>
               </div>

@@ -194,21 +194,21 @@ const Index = () => {
 
   // Featured content
   const featuredDj = {
-    title: "Techna",
-    subtitle: "Techno / Minimal Pioneer",
-    description: "Experience the hypnotic minimal soundscapes crafted by Berlin-based DJ Techna. Known for precise mixing and deep atmospheric tracks, Techna has performed at major venues across Europe and released on respected labels.",
+    title: "NASAC",
+    subtitle: "Techno / Minimal",
+    description: "Nicolás Sanhueza, conocido como Nasac, es un DJ emergente apasionado por el techno. Explorando géneros como peak time, raw/hypnotic, hardgroove y hard techno. Su estilo busca generar una conexión profunda con el público, creando una atmósfera inmersiva.",
     image: "https://images.unsplash.com/photo-1516873240891-4bf014598ab4?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    ctaText: "View Profile",
-    ctaLink: "#djs",
+    ctaText: "Ver Perfil",
+    ctaLink: "/dj/nasac",
     type: "dj" as const
   };
 
   const featuredEvent = {
-    title: "TechnoFusion Festival",
-    subtitle: "June 25, 2025 • Warehouse 23, Berlin",
-    description: "The biggest techno gathering of the year returns to Berlin with three days of non-stop music across five stages. Featuring international headliners and underground talent, this is the event no techno enthusiast should miss.",
+    title: "IMPCORE Showcase",
+    subtitle: "25 Junio, 2025 • Club Vision, Santiago",
+    description: "El evento más grande de techno del año regresa a Santiago con tres días de música ininterrumpida en cinco escenarios. Con headliners internacionales y talentos underground, este es el evento que ningún entusiasta del techno debe perderse.",
     image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    ctaText: "Get Tickets",
+    ctaText: "Conseguir Tickets",
     ctaLink: "#events",
     type: "event" as const
   };
@@ -225,38 +225,38 @@ const Index = () => {
             alt="Techno Event" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-techno-darker via-techno-darker/90 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-impcore-dark via-impcore-dark/90 to-transparent"></div>
         </div>
         
         <div className="container relative z-10 text-center px-4 mb-16">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display mb-6 tracking-wider animate-fade-in">
-            SONIC<span className="text-neon-purple">PULSE</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-wider animate-fade-in">
+            IMP<span className="text-impcore-pink">CORE</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "200ms" }}>
-            Immerse yourself in the underground techno scene with live sets, talented DJs, and exclusive events
+            Sumérgete en la escena techno underground con sets en vivo, DJs talentosos y eventos exclusivos
           </p>
         </div>
         
         {/* Featured Radio Player */}
         <div className="container relative z-10 px-4 animate-fade-in" style={{ animationDelay: "400ms" }}>
           <div className="max-w-5xl mx-auto">
-            <div className="glass border border-neon-purple/30 p-2 rounded-lg mb-8">
+            <div className="glass border border-impcore-pink/30 p-2 rounded-lg mb-8">
               <div className="flex justify-between items-center mb-4 px-4 pt-2">
                 <div className="flex items-center">
-                  <span className="inline-block w-3 h-3 bg-neon-purple rounded-full animate-pulse mr-2"></span>
-                  <h2 className="text-xl font-display">LIVE RADIO</h2>
+                  <span className="inline-block w-3 h-3 bg-impcore-pink rounded-full animate-pulse mr-2"></span>
+                  <h2 className="text-xl font-bold">RADIO EN VIVO</h2>
                 </div>
-                <p className="text-neon-cyan text-sm">Broadcasting 24/7</p>
+                <p className="text-impcore-pink text-sm">Transmitiendo 24/7</p>
               </div>
               <RadioPlayer />
             </div>
             
             <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-neon-purple hover:bg-neon-purple/80 text-black text-lg px-8 py-6">
-                Listen Live
+              <Button className="bg-impcore-pink hover:bg-impcore-darkpink text-white text-lg px-8 py-6">
+                Escuchar En Vivo
               </Button>
-              <Button variant="outline" className="border-neon-cyan text-neon-cyan hover:bg-neon-cyan/20 text-lg px-8 py-6">
-                Explore Events
+              <Button variant="outline" className="border-white text-white hover:bg-white/20 text-lg px-8 py-6">
+                Explorar Eventos
               </Button>
             </div>
           </div>
@@ -264,12 +264,12 @@ const Index = () => {
       </section>
       
       {/* DJs Section */}
-      <section id="djs" className="py-20 bg-techno-dark">
+      <section id="djs" className="py-20 bg-impcore-dark">
         <div className="container px-4">
           <FeaturedSpotlight {...featuredDj} />
           
           <FilterBar 
-            title="RESIDENT DJs" 
+            title="DJS RESIDENTES" 
             options={djGenreOptions}
             onFilterChange={setDjFilter}
             onSearchChange={setDjSearch}
@@ -287,7 +287,7 @@ const Index = () => {
       <section id="videos" className="py-20">
         <div className="container px-4">
           <FilterBar 
-            title="VIDEO SETS" 
+            title="LANZAMIENTOS" 
             options={videoGenreOptions}
             onFilterChange={setVideoFilter}
             onSearchChange={setVideoSearch}
@@ -302,17 +302,17 @@ const Index = () => {
       </section>
       
       {/* Events Section */}
-      <section id="events" className="py-20 bg-techno-dark">
+      <section id="events" className="py-20 bg-impcore-dark">
         <div className="container px-4">
           <FeaturedSpotlight {...featuredEvent} />
           
           <div className="flex flex-col md:flex-row justify-between items-center mb-12">
             <div>
-              <h2 className="text-3xl font-display mb-2">UPCOMING EVENTS</h2>
-              <p className="text-gray-400">Join us at these exclusive techno gatherings</p>
+              <h2 className="text-3xl font-bold mb-2">PRÓXIMOS EVENTOS</h2>
+              <p className="text-gray-400">Únete a estos exclusivos eventos de techno</p>
             </div>
-            <Button variant="link" className="text-neon-purple">
-              All Events
+            <Button variant="link" className="text-impcore-pink">
+              Todos los Eventos
             </Button>
           </div>
           
@@ -323,8 +323,8 @@ const Index = () => {
           </div>
           
           <div className="mt-12 text-center">
-            <Button className="bg-neon-purple hover:bg-neon-purple/80 text-black px-8">
-              Submit Your Event
+            <Button className="bg-impcore-pink hover:bg-impcore-darkpink text-white px-8">
+              Enviar Tu Evento
             </Button>
           </div>
         </div>
@@ -334,9 +334,9 @@ const Index = () => {
       <section className="py-20">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-display mb-6">STAY IN THE LOOP</h2>
+            <h2 className="text-3xl font-bold mb-6">MANTENTE INFORMADO</h2>
             <p className="text-gray-400 mb-8">
-              Subscribe to our newsletter for exclusive content, upcoming events and special offers
+              Suscríbete a nuestro boletín para contenido exclusivo, próximos eventos y ofertas especiales
             </p>
             <NewsletterForm />
           </div>

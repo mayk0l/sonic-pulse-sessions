@@ -28,17 +28,17 @@ export function EventCard({ title, date, location, image }: EventCardProps) {
         <CardContent className="p-6 md:w-2/3 flex flex-col justify-between">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <CalendarDays className="h-4 w-4 text-neon-purple" />
+              <CalendarDays className="h-4 w-4 text-impcore-pink" />
               <span className="text-sm text-gray-300">{date}</span>
             </div>
             
-            <h3 className="text-xl font-display mb-2">{title}</h3>
+            <h3 className="text-xl font-bold mb-2">{title}</h3>
             <p className="text-gray-400 mb-4">{location}</p>
           </div>
           
           <div className="mt-4">
-            <Button className="bg-neon-purple hover:bg-neon-purple/80 text-black">
-              Get Tickets
+            <Button className="bg-impcore-pink hover:bg-impcore-darkpink text-white">
+              Conseguir Tickets
             </Button>
           </div>
         </CardContent>

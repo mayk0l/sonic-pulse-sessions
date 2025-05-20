@@ -54,9 +54,16 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				neon: {
-					purple: '#9b87f5',
-					cyan: '#0EA5E9',
-					magenta: '#ec4899',
+					purple: '#9b87f5', // Keep this for compatibility
+					cyan: '#0EA5E9',  // Keep this for compatibility
+					magenta: '#ec4899', // Keep this for compatibility
+				},
+				impcore: {
+					pink: '#e91e63',     // IMPCORE signature pink
+					darkpink: '#d11556', // Darker variation
+					dark: '#121212',     // Background dark
+					darker: '#0a0a0a',   // Even darker background
+					light: '#2a2a2a',    // Light background
 				},
 				techno: {
 					dark: '#121212',
@@ -65,8 +72,8 @@ export default {
 				},
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				display: ['Orbitron', 'sans-serif'],
+				sans: ['Roboto', 'sans-serif'],
+				display: ['Roboto', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

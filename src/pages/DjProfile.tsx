@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Navbar } from '@/components/Navbar';
@@ -6,7 +5,7 @@ import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { FeaturedSpotlight } from '@/components/FeaturedSpotlight';
 import { RadioPlayer } from '@/components/RadioPlayer';
-import { ExternalLink, Instagram, SoundCloud, Headphones, Download, Mail } from 'lucide-react';
+import { ExternalLink, Instagram, Radio, Headphones, Download, Mail } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -111,7 +110,7 @@ export default function DjProfile() {
                     rel="noreferrer" 
                     className="bg-techno-dark p-2 rounded-full hover:bg-neon-purple/20 transition-colors"
                   >
-                    <SoundCloud className="h-5 w-5 text-neon-purple" />
+                    <Radio className="h-5 w-5 text-neon-purple" />
                   </a>
                   
                   <Button className="bg-neon-purple text-black hover:bg-neon-purple/80 ml-2">
@@ -279,7 +278,7 @@ export default function DjProfile() {
                           rel="noreferrer" 
                           className="bg-techno-dark p-3 rounded-full hover:bg-neon-purple/20 transition-colors"
                         >
-                          <SoundCloud className="h-6 w-6 text-neon-purple" />
+                          <Radio className="h-6 w-6 text-neon-purple" />
                         </a>
                       </div>
                     </div>

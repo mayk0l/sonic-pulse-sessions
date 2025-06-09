@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -41,7 +41,55 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     -webkit-tap-highlight-color: transparent;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  /* Futuristic Typography */
+  .futuristic-text {
+    font-family: 'Orbitron', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-shadow: 0 0 20px rgba(234, 56, 76, 0.5);
+  }
+
+  .glow-text {
+    text-shadow: 
+      0 0 5px rgba(234, 56, 76, 0.8),
+      0 0 10px rgba(234, 56, 76, 0.6),
+      0 0 15px rgba(234, 56, 76, 0.4),
+      0 0 20px rgba(234, 56, 76, 0.2);
+    animation: textGlow 2s ease-in-out infinite alternate;
+  }
+
+  .futuristic-btn {
+    font-family: 'Orbitron', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .futuristic-btn:hover {
+    box-shadow: 
+      0 0 20px rgba(234, 56, 76, 0.6),
+      inset 0 0 20px rgba(234, 56, 76, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .futuristic-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .futuristic-btn:hover::before {
+    left: 100%;
   }
 
   /* Custom classes */
@@ -133,6 +181,21 @@
   }
   50% {
     box-shadow: 0 0 15px 5px rgba(155, 135, 245, 0.8);
+  }
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow: 
+      0 0 5px rgba(234, 56, 76, 0.8),
+      0 0 10px rgba(234, 56, 76, 0.6),
+      0 0 15px rgba(234, 56, 76, 0.4);
+  }
+  to {
+    text-shadow: 
+      0 0 10px rgba(234, 56, 76, 1),
+      0 0 20px rgba(234, 56, 76, 0.8),
+      0 0 30px rgba(234, 56, 76, 0.6);
   }
 }
 

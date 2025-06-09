@@ -221,45 +221,40 @@ const Index = () => {
       <section className="relative min-h-screen flex flex-col items-center justify-center py-20">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" 
-            alt="Techno Event" 
+            src="/lovable-uploads/250aca03-29a4-4b86-ae41-1cb06dd3f389.png" 
+            alt="IMPCORE Club Event" 
             className="w-full h-full object-cover"
-            style={{ filter: 'hue-rotate(320deg) saturate(1.5)' }} // Adds a red tint to the image
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-impcore-dark via-impcore-dark/90 to-transparent" 
-              style={{ background: 'linear-gradient(to top, rgb(10, 10, 15), rgba(10, 10, 15, 0.9), transparent)' }}></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-impcore-dark via-impcore-dark/70 to-impcore-dark/40"></div>
+          <div className="absolute inset-0 bg-impcore-dark/20"></div>
         </div>
         
         <div className="container relative z-10 text-center px-4 mb-16">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-wider animate-fade-in">
-            IMP<span className="text-[#ea384c]">CORE</span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-[0.2em] animate-fade-in futuristic-text">
+            IMP<span className="text-[#ea384c] glow-text">CORE</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "200ms" }}>
-            Sumérgete en la escena techno underground con sets en vivo, DJs talentosos y eventos exclusivos
+          <p className="text-lg md:text-xl text-gray-200 mb-4 max-w-4xl mx-auto animate-fade-in tracking-wider font-light" style={{ animationDelay: "200ms" }}>
+            EXPLORA NUESTROS PATRONES MENTALES E INMERSIVOS Y SUMÉRGETE EN EL MUNDO DE LA MÚSICA TECHNO
           </p>
+          <div className="flex justify-center mb-8 animate-fade-in" style={{ animationDelay: "300ms" }}>
+            <Button className="bg-[#ea384c] hover:bg-[#ea384c]/80 text-white text-lg px-12 py-4 rounded-none font-bold tracking-widest futuristic-btn">
+              EXPLORA NUESTROS EVENTOS
+            </Button>
+          </div>
         </div>
         
         {/* Featured Radio Player */}
-        <div className="container relative z-10 px-4 animate-fade-in" style={{ animationDelay: "400ms" }}>
+        <div className="container relative z-10 px-4 animate-fade-in" style={{ animationDelay: "500ms" }}>
           <div className="max-w-5xl mx-auto">
             <div className="glass border border-[#ea384c]/30 p-2 rounded-lg mb-8">
               <div className="flex justify-between items-center mb-4 px-4 pt-2">
                 <div className="flex items-center">
                   <span className="inline-block w-3 h-3 bg-[#ea384c] rounded-full animate-pulse mr-2"></span>
-                  <h2 className="text-xl font-bold">RADIO EN VIVO</h2>
+                  <h2 className="text-xl font-bold tracking-wider">RADIO EN VIVO</h2>
                 </div>
-                <p className="text-[#ea384c] text-sm">Transmitiendo 24/7</p>
+                <p className="text-[#ea384c] text-sm font-bold tracking-wider">TRANSMITIENDO 24/7</p>
               </div>
               <RadioPlayer />
-            </div>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-[#ea384c] hover:bg-[#ea384c]/80 text-white text-lg px-8 py-6">
-                Escuchar En Vivo
-              </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white/20 text-lg px-8 py-6">
-                Explorar Eventos
-              </Button>
             </div>
           </div>
         </div>
@@ -310,11 +305,11 @@ const Index = () => {
           
           <div className="flex flex-col md:flex-row justify-between items-center mb-12">
             <div>
-              <h2 className="text-3xl font-bold mb-2">PRÓXIMOS EVENTOS</h2>
-              <p className="text-gray-400">Únete a estos exclusivos eventos de techno</p>
+              <h2 className="text-3xl font-bold mb-2 tracking-wider">PRÓXIMOS EVENTOS</h2>
+              <p className="text-gray-400 tracking-wide">Únete a estos exclusivos eventos de techno</p>
             </div>
-            <Button variant="link" className="text-impcore-pink">
-              Todos los Eventos
+            <Button variant="link" className="text-impcore-pink font-bold tracking-wider">
+              TODOS LOS EVENTOS
             </Button>
           </div>
           
@@ -325,8 +320,8 @@ const Index = () => {
           </div>
           
           <div className="mt-12 text-center">
-            <Button className="bg-impcore-pink hover:bg-impcore-darkpink text-white px-8">
-              Enviar Tu Evento
+            <Button className="bg-impcore-pink hover:bg-impcore-darkpink text-white px-8 font-bold tracking-widest rounded-none">
+              ENVIAR TU EVENTO
             </Button>
           </div>
         </div>
@@ -336,8 +331,8 @@ const Index = () => {
       <section className="py-20">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">MANTENTE INFORMADO</h2>
-            <p className="text-gray-400 mb-8">
+            <h2 className="text-3xl font-bold mb-6 tracking-wider">MANTENTE INFORMADO</h2>
+            <p className="text-gray-400 mb-8 tracking-wide">
               Suscríbete a nuestro boletín para contenido exclusivo, próximos eventos y ofertas especiales
             </p>
             <NewsletterForm />

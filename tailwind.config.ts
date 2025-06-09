@@ -72,8 +72,9 @@ export default {
 				},
 			},
 			fontFamily: {
-				sans: ['Roboto', 'sans-serif'],
-				display: ['Roboto', 'sans-serif'],
+				sans: ['Exo 2', 'sans-serif'],
+				display: ['Orbitron', 'monospace'],
+				futuristic: ['Orbitron', 'monospace'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -115,6 +116,14 @@ export default {
 					'100%': {
 						height: '5px'
 					}
+				},
+				'textGlow': {
+					'0%': {
+						textShadow: '0 0 5px rgba(234, 56, 76, 0.8), 0 0 10px rgba(234, 56, 76, 0.6), 0 0 15px rgba(234, 56, 76, 0.4)'
+					},
+					'100%': {
+						textShadow: '0 0 10px rgba(234, 56, 76, 1), 0 0 20px rgba(234, 56, 76, 0.8), 0 0 30px rgba(234, 56, 76, 0.6)'
+					}
 				}
 			},
 			animation: {
@@ -126,6 +135,7 @@ export default {
 				'waveform-3': 'waveform 1.5s ease-in-out infinite',
 				'waveform-4': 'waveform 0.8s ease-in-out infinite',
 				'waveform-5': 'waveform 1.1s ease-in-out infinite',
+				'text-glow': 'textGlow 2s ease-in-out infinite alternate',
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
